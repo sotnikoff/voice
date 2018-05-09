@@ -15,7 +15,15 @@
     <div class="container" id="main-container">
       <div class="row">
         <div class="col-md-12">
+          <%= link_to 'Повелитель ботов', root_path %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
           <%= yield %>
+          <footer class="text-center">
+            <p class="small text-muted">Разработка сервиса вдохновлена товарищем Адамом в 2018 году</p>
+          </footer>
         </div>
       </div>
     </div>

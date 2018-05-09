@@ -1,16 +1,32 @@
-<h1>Текстовой повелитель ботов</h1>
-<h3>Введите текст в поле, выберите бота и формат</h3>
-<%= form_tag(convert_voice_path) do %>
-  <p>
-    <%= text_area_tag :text %>
-  </p>
-  <p>
-    <%= select_tag :voice, options_for_select(%w[Maxim Tatyana]) %>
-  </p>
-  <p>
-    <%= select_tag :format, options_for_select(%w[mp3 ogg_vorbis]) %>
-  </p>
-  <p>
-    <%= submit_tag 'Отжигать!' %>
-  </p>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Текстовой повелитель ботов</h1>
+
+      <%= form_tag(convert_voice_path) do %>
+        <div class="form-group">
+          <%= label_tag :text, 'Введите текст в поле' %>
+          <%= text_area_tag :text, nil, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= label_tag :voice, 'Выберите бота' %>
+          <%= select_tag :voice, options_for_select(%w[Maxim Tatyana]), class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= label_tag :format, 'Выберите формат' %>
+          <%= select_tag :format, options_for_select(%w[mp3 ogg_vorbis]), class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= submit_tag 'Отжигать!', class: 'btn btn-success' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+

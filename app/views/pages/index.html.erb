@@ -1,32 +1,19 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h1>Повелитель ботов</h1>
+<h1>Повелитель ботов</h1>
 
-      <%= form_tag(convert_voice_path) do %>
-        <div class="form-group">
-          <%= label_tag :text, 'Введите текст в поле' %>
-          <%= text_area_tag :text, nil, class: 'form-control' %>
-        </div>
-        <div class="form-group">
-          <%= label_tag :voice, 'Выберите бота' %>
-          <%= select_tag :voice, options_for_select(%w[Maxim Tatyana]), class: 'form-control' %>
-        </div>
-        <div class="form-group">
-          <%= label_tag :format, 'Выберите формат' %>
-          <%= select_tag :format, options_for_select(%w[mp3 ogg_vorbis]), class: 'form-control' %>
-        </div>
-        <div class="form-group">
-          <%= submit_tag 'Отжигать!', class: 'btn btn-success' %>
-        </div>
-      <% end %>
-    </div>
+<%= form_tag(show_voice_path) do %>
+  <div class="form-group">
+    <%= label_tag :text, 'Введите текст в поле' %>
+    <%= text_area_tag :text, nil, class: 'form-control' %>
   </div>
-</div>
-
-
-
-
-
-
-
+  <div class="form-group">
+    <%= label_tag :voice, 'Выберите бота' %>
+    <%= select_tag :voice, options_for_select(%w[Maxim Tatyana]), class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :audio_format, 'Выберите формат' %>
+    <%= select_tag :audio_format, options_for_select(%w[mp3 ogg_vorbis]), class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= submit_tag 'Отжигать!', class: 'btn btn-success' %>
+  </div>
+<% end %>

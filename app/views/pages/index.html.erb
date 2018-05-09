@@ -7,7 +7,8 @@
   </div>
   <div class="form-group">
     <%= label_tag :voice, 'Выберите бота' %>
-    <%= select_tag :voice, options_for_select(%w[Maxim Tatyana Matthew Kimberly Mizuki]), class: 'form-control' %>
+    <%= select_tag :voice, options_for_select(%w[Maxim Tatyana Matthew Kimberly Mizuki Takumi]),
+                   class: 'form-control' %>
   </div>
   <div class="form-group">
     <%= label_tag :audio_format, 'Выберите формат' %>

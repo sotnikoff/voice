@@ -1,9 +1,14 @@
 class VoiceController < ApplicationController
   def show
-    respond_to do |format|
-      format.all { render 'voice/show' }
-    end
+    @bot_name = if params[:voice] == 'Maxim'
+                  'Многоуважаемый бот Максим Максимович'
+                elsif params[:voice] == 'Tatyana'
+                  'Несравненная Елена Ивановна'
+                else
+                  'Какой-то неизвестный бот'
+                end
   end
+
   def convert
     file = ConvertTextToSpeech.call(params[:text], 'us-east-1', params[:voice], params[:audio_format])
     extension = if params[:audio_format] == 'ogg_vorbis'

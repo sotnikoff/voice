@@ -1,5 +1,16 @@
-<h1>Hello</h1>
+<h1>Текстовой повелитель ботов</h1>
+<h3>Введите текст в поле, выберите бота и формат</h3>
 <%= form_tag(convert_voice_path) do %>
-  <%= text_area_tag :text %>
-  <%= submit_tag 'Submit' %>
+  <p>
+    <%= text_area_tag :text %>
+  </p>
+  <p>
+    <%= select_tag :voice, options_for_select(%w[Maxim Tatyana]) %>
+  </p>
+  <p>
+    <%= select_tag :format, options_for_select(%w[mp3 ogg_vorbis]) %>
+  </p>
+  <p>
+    <%= submit_tag 'Отжигать!' %>
+  </p>
 <% end %>

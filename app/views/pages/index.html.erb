@@ -1,6 +1,6 @@
 <h1>Повелитель ботов</h1>
 
-<%= form_tag(show_voice_path) do %>
+<%= form_tag(show_voice_path, method: :get) do %>
   <div class="form-group">
     <%= label_tag :text, 'Введите текст в поле' %>
     <%= text_area_tag :text, nil, class: 'form-control' %>

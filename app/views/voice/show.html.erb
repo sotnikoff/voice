@@ -1,3 +1,4 @@
+<script type="text/javascript" src="https://vk.com/js/api/share.js?95" charset="windows-1251"></script>
 <h3>Ваш отжиг готов!!</h3>
 <hr>
 <audio src="<%= convert_voice_path(audio_format: params[:audio_format],
@@ -8,3 +9,7 @@
                                             text: params[:text], voice: params[:voice]),
               class: 'btn btn-default' %>
 </p>
+
+<script type="text/javascript"><!--
+document.write(VK.Share.button(false,{type: "round", text: "Поделиться"}));
+--></script>
